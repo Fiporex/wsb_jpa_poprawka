@@ -35,6 +35,7 @@ public class VisitEntity {
 
 	// Two direction
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
+	@JoinColumn(name = "PATIENT_ID", nullable = false)
 	private PatientEntity patient;
 
 	public Long getId() {
